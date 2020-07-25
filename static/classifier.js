@@ -49,6 +49,12 @@ async function initialize() {
     model = await tf.loadLayersModel('model.json');
 }
 
+function select_file(){
+  document.getElementById('modelUpload').click()
+  upload_model()
+}
+
+
 async function upload_model() {
     const modelfile = document.getElementById('modelUpload').files[0];
 

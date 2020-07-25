@@ -9,12 +9,23 @@
     </head>
 
     <body>
-        <div class="main">
+<!--  -->
+<div class="navbar">
+    <ul>
+        <li> <img id="navimg" src="logo.svg" /> </li>
+        <li> presents</li>
+        <li> Pokedex</li>
+    </ul>
+</div>
+
+<!--  -->
+        <!-- <div class="main">
             <div class="title">
                 <h3>Pokedex</h3>
             </div>
-        </div>
-
+        </div> -->
+<div class="container">
+    <div class="left">
         <div class="panel">
             <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
             <label for="file-upload" id="file-drag" class="upload-box">
@@ -22,17 +33,18 @@
                 <img id="image-preview" class="hidden" />
             </label>
         </div>
-
-        <div class="button_group">
+</div>
+        <div class="middle">
     <input type="button" value="Clear" class="button" onclick="clearImage();" />
     <input type="button" value="Predict" class="button" onclick="predict();" />
+    <!-- <br/> -->
+    <div class="Uploadyourmodel">
+        <input type="file" id="modelUpload" name="modelFilepath" hidden="hidden" value="Upload Your Model" accept=".json">
+        <input style="background-color: orange;" type="button" value="Upload"  class="button" onclick="select_file()" />
     
+    </div>
         </div>
-<div class="Uploadyourmodel">
-    <input type="file" id="modelUpload" name="modelFilepath" value="Upload Your Model" accept=".json">
-    <input style="background-color: orange;" type="button" value="Upload" class="button" onclick="upload_model()" />
-
-</div>
+        <div class="right">
         <div id="image-box">
             <img id="image-display" />
             <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
@@ -40,6 +52,8 @@
             </svg>
         </div>
         <div style="text-align: center;font-weight: 900;" id="pred-result2" class="hidden"></div>
+    </div>
+    </div>
     </body>
 
     <footer>
