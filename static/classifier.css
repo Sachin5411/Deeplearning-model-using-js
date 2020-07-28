@@ -6,7 +6,7 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(78, 223, 198);
+  background-color: #303960;
   box-sizing: border-box;
 }
 
@@ -22,12 +22,13 @@ html,body{
   margin: 0;
   padding: 0;
   overflow: visible;
+  color: #e5e5e5;
 }
 
 #navimg{
   display: inline-block;
   width: 20%;
-  padding-left: 12%;
+  padding-left: 13%;
 }
 
 .container{
@@ -49,14 +50,22 @@ html,body{
   justify-content: center;
   align-items: center;
 }
+.middle > ul {
+  text-align: center;
+  list-style-type: none;
+  overflow: visible;
+  padding-top: 10px;
+  /* color: #e5e5e5; */
+}
 
 .right{
   /* background-color: rgba(0, 100, 0, 0.493); */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: orangered 1px solid; */
-  /* padding:10% */
+  border: #e5e5e5 2px solid;
+  margin:12%;
+  border-radius: 4px;
   }
 
 /* Global button style */
@@ -68,10 +77,11 @@ html,body{
   border: none;
   text-decoration: none;
   outline: none;
-  color: #ffffff;
-  background-color: rgb(0, 120, 212);
+  color: #303960;
+  background-color:#ea9a96;
+   /* rgb(0, 120, 212); */
   padding: 0.5rem 1.2rem;
-  border-radius: 2px;
+  border-radius: 5px;
   font-size: 1rem;
   min-width: 6rem;
   margin-left: 0.5rem;
@@ -79,7 +89,11 @@ html,body{
 }
 
 .button:hover {
-  background-color: rgb(16, 110, 190);
+  /* background-color: rgb(16, 110, 190); */
+  /* box-shadow: 4px 4px 7px 4px #bd716d; */
+border: 2px solid #e5e5e5;
+border-radius: 6px;
+/* transition:0.5s ease; */
 }
 
 .button.disabled {
@@ -109,17 +123,17 @@ html,body{
   /* margin-bottom: 2rem; */
   display: flex;
   /* flex-direction: row; */
-  margin-top: 3%;
+  margin-top: 1.5%;
   justify-content: center;
 }
 
 .Uploadyourmodel>input{
-  background-color: orange;
+  background-color: #f8b24f;
 }
-
+/* 
 .Uploadyourmodel>input:hover{
-  background-color: rgb(230, 120, 31);
-}
+
+} */
 
 #upload-caption{
   font-size: 2.75vw;
@@ -146,7 +160,7 @@ html,body{
   cursor: pointer;
   width: 90%;
   height: 90%;
-  background: #fff;
+  background: rgb(200, 214, 230);
   border: 2.5px dashed #b9b9c0;
   border-radius: 0.4rem;
   display: flex;
@@ -164,12 +178,12 @@ html,body{
 }
 
 .upload-box:hover {
-  border-color: rgb(84, 88, 90);
+  border-color: rgb(255, 255, 255);
 }
 
 .upload-box #image-preview {
-  max-width: 95%;
-  max-height: 95%;
+  max-width: 90%;
+  max-height: 90%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 

@@ -148,12 +148,12 @@ function clearImage() {
   // remove image sources and hide them
   imagePreview.src = "";
   imageDisplay.src = "";
-  predResult.innerHTML = "";
+  predResult.innerHTML = "?";
 
   hide(imagePreview);
   hide(imageDisplay);
   hide(loader);
-  hide(predResult);
+  // hide(predResult);
   show(uploadCaption);
 
   imageDisplay.classList.remove("loading");
@@ -173,7 +173,7 @@ function previewFile(file) {
     hide(uploadCaption);
 
     // reset
-    predResult.innerHTML = "";
+    predResult.innerHTML = "?";
     imageDisplay.classList.remove("loading");
 
     // displayImage(reader.result, "image-display");
@@ -202,3 +202,20 @@ function show(el) {
 }
 
 initialize();
+
+
+
+//    Modal Code
+window.addEventListener('load', bindEvents3);
+
+var popOut = document.querySelector('.bg-popOutPg');
+var hidePopOut = document.querySelector('.lbtbBtn');
+
+function bindEvents3() {
+    hidePopOut.addEventListener('click', hidePop);
+    // popOut.addEventListener('click',hidePop);
+}
+
+function hidePop() {
+    popOut.style.display = 'none';
+}
