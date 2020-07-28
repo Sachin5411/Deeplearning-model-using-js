@@ -11,11 +11,18 @@
     <body>
 <!--  -->
 <div class="navbar">
+    <div class="Uploadyourmodel" style="float: right;">
+        <input type="file" id="modelUpload" name="modelFilepath" hidden="hidden" value="Upload Your Model" accept=".json">
+        <input id="upld-btn" type="button" value="Upload Your Model"  class="button" onclick="select_file()" />
+    
+    </div>
     <ul>
         <li> <img id="navimg" src="logo.svg" /> </li>
-        <li> presents</li>
-        <li> Pokedex</li>
+        <li style="line-height:10px;" > presents</li>
+        <!-- <br/> -->
+        <li style="font-size: 5vw;"> Pokedex</li>
     </ul>
+    
 </div>
 
 <!--  -->
@@ -29,7 +36,7 @@
         <div class="panel">
             <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
             <label for="file-upload" id="file-drag" class="upload-box">
-                <div id="upload-caption">Drop image here or click to select</div>
+                <div id="upload-caption">Drop image of your Pokemon</div>
                 <img id="image-preview" class="hidden" />
             </label>
         </div>
@@ -38,11 +45,7 @@
     <input type="button" value="Clear" class="button" onclick="clearImage();" />
     <input type="button" value="Predict" class="button" onclick="predict();" />
     <!-- <br/> -->
-    <div class="Uploadyourmodel">
-        <input type="file" id="modelUpload" name="modelFilepath" hidden="hidden" value="Upload Your Model" accept=".json">
-        <input style="background-color: orange;" type="button" value="Upload"  class="button" onclick="select_file()" />
     
-    </div>
         </div>
         <div class="right">
         <div id="image-box">
@@ -51,7 +54,7 @@
                 <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
             </svg>
         </div>
-        <div style="text-align: center;font-weight: 900;" id="pred-result2" class="hidden"></div>
+                <div style="text-align: center;font-weight: 900;" id="pred-result2" class="hidden"></div>
     </div>
     </div>
     </body>
@@ -60,11 +63,5 @@
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
         <script src="/static/classifier.js"></script>
     </footer>
-
-
-
-
-
-
 
 </html>

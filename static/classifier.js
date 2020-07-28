@@ -106,10 +106,10 @@ async function predict() {
 
 
 
-  if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
-    window.alert("Please select an image before submit.");
-    return;
-  }
+  // if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
+  //   window.alert("Please select an image before submit.");
+  //   return;
+  // }
 
   let tensorImg = tf.browser.fromPixels(imagePreview).resizeNearestNeighbor([120,120]).toFloat().expandDims();
   var prediction = await model.predict(tensorImg).data();
@@ -176,7 +176,7 @@ function previewFile(file) {
     predResult.innerHTML = "";
     imageDisplay.classList.remove("loading");
 
-    displayImage(reader.result, "image-display");
+    // displayImage(reader.result, "image-display");
   };
 }
 

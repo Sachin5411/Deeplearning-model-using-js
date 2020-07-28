@@ -6,54 +6,61 @@ html,body{
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: brown;
+  background-color: rgb(78, 223, 198);
   box-sizing: border-box;
 }
 
 .navbar{
-  height: 30%;
-  background-color: chartreuse;
+  height: 20%;
+  /* background-color: chartreuse; */
+  /* display: flex; */
 }
+
 .navbar > ul {
   text-align: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: visible;
 }
 
 #navimg{
   display: inline-block;
-  width: 30%;
+  width: 20%;
+  padding-left: 12%;
 }
 
 .container{
-  height: 70%;
+  height: 80%;
   display:grid;
-  grid-template-columns: 3fr 1fr 3fr;
-  
+  grid-template-columns: 3fr 1fr 3fr; 
 }
+
 .left{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: chocolate;
+  /* background-color: rgba(210, 105, 30, 0.349); */
   height: 100%;
 }
 
 .middle{
-  background-color: rgb(255, 238, 80);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .right{
-  background-color: darkgreen;
+  /* background-color: rgba(0, 100, 0, 0.493); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: orangered 1px solid; */
+  /* padding:10% */
   }
 
-
-
 /* Global button style */
+
 .button {
   font-family: inherit;
   text-align: center;
@@ -99,10 +106,19 @@ html,body{
 } */
 
 .Uploadyourmodel{
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  margin-top: 3%;
   justify-content: center;
+}
+
+.Uploadyourmodel>input{
+  background-color: orange;
+}
+
+.Uploadyourmodel>input:hover{
+  background-color: rgb(230, 120, 31);
 }
 
 #upload-caption{
@@ -128,8 +144,8 @@ html,body{
   font-size: 0.8rem;
   color: #666666;
   cursor: pointer;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background: #fff;
   border: 2.5px dashed #b9b9c0;
   border-radius: 0.4rem;
@@ -152,10 +168,8 @@ html,body{
 }
 
 .upload-box #image-preview {
-  max-width: 90%;
-  /* 14rem; */
-  max-height: 90%;
-  /* 8rem; */
+  max-width: 95%;
+  max-height: 95%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
