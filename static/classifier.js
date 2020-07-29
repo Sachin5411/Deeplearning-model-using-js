@@ -49,10 +49,24 @@ async function initialize() {
     model = await tf.loadLayersModel('model.json');
 }
 
-function select_file(){
-  document.getElementById('modelUpload').click()
-  upload_model()
-}
+var upld_model=document.getElementById('upld-btn')
+var select_model=document.getElementById('modelUpload')
+
+upld_model.addEventListener('click',function(){
+select_model.click();
+
+})
+
+select_model.addEventListener('change',function(){
+  console.log("uploading User Model")
+  upload_model();
+})
+
+
+// function select_file(){
+//   document.getElementById('modelUpload').click()
+//   upload_model()
+// }
 
 
 async function upload_model() {
@@ -84,9 +98,10 @@ if (modelfile) {
        // model = await tf.loadLayersModel(model_file); 
     }
 else{
-  console.log("using pre-trained model")
-  model = await tf.loadLayersModel('model.json'); 
-  // await model.save('localstorage://my-model');
+  // console.log("using pre-trained model")
+  // model = await tf.loadLayersModel('model.json'); 
+  // // await model.save('localstorage://my-model');
+  alert("Please select a model first :) ");
 
 }
 }
@@ -219,3 +234,4 @@ function bindEvents3() {
 function hidePop() {
     popOut.style.display = 'none';
 }
+
