@@ -48,6 +48,8 @@
                 <h3>Pokedex</h3>
             </div>
         </div> -->
+        <div id="msgpop">This Message will get remove in 3 sec</div>
+
     <div class="container">
         <div class="left">
             <div class="panel">
@@ -76,6 +78,21 @@
             <!-- class="hidden"-->
         </div>
     </div>
+<script>
+function popmsg(popins) {
+            var x = document.getElementById("msgpop");
+            if (popins != undefined) {
+                x.innerHTML = popins;
+            }
+            x.className = "show";
+
+            setTimeout(function() {
+                x.className = x.className.replace("show", "");
+            }, 3000);
+        }
+
+</script>
+
 </body>
 
 <footer>

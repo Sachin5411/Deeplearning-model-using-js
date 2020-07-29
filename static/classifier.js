@@ -71,7 +71,7 @@ select_model.addEventListener('change',function(){
 
 async function upload_model() {
     const modelfile = document.getElementById('modelUpload').files[0];
-
+    popmsg("Uploading model")
 // const model = await tfl.loadModel(tf.io.browserFiles(modelfile));
 // var file=fileSelector.files[0];
 if (modelfile) {
@@ -119,16 +119,14 @@ async function predict() {
 // console.log(file.name)
  
 
+// console.log(imagePreview)
 
-
-  // if (!imageDisplay.src || !imageDisplay.src.startsWith("data")) {
-  //   window.alert("Please select an image before submit.");
-  //   return;
-  // }
-
+  if (!imagePreview.src || !imagePreview.src.startsWith("blob")) {
+    window.alert("Please select an image before submit.");
+    return;
+  }
   let tensorImg = tf.browser.fromPixels(imagePreview).resizeNearestNeighbor([120,120]).toFloat().expandDims();
   var prediction = await model.predict(tensorImg).data();
-  // var obj = {a: 1, b: 2, undefined: 1};
   var highestVal = Math.max.apply(null, Object.values(prediction)),
   val = Object.keys(prediction).find(function(a) {
     return prediction[a] === highestVal;
