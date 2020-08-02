@@ -28,7 +28,7 @@ html,body{
 #navimg{
   display: inline-block;
   width: 20%;
-  padding-left: 13%;
+  /* padding-left: 13%; */
 }
 
 .container{
@@ -79,6 +79,7 @@ html,body{
   outline: none;
   color: #303960;
   background-color:#ea9a96;
+  border: 2px solid #ea9a96;
    /* rgb(0, 120, 212); */
   padding: 0.5rem 1.2rem;
   border-radius: 5px;
@@ -120,15 +121,16 @@ border-radius: 6px;
 } */
 
 .Uploadyourmodel{
-  /* margin-bottom: 2rem; */
-  display: flex;
-  /* flex-direction: row; */
+  /* display: flex; */
   margin-top: 1.5%;
-  justify-content: center;
+  /* justify-content: center; */
+  position: absolute;
+  right: 0px;
 }
 
 .Uploadyourmodel>input{
   background-color: #f8b24f;
+  border: 2px solid #f8b24f;
 }
 /* 
 .Uploadyourmodel>input:hover{
