@@ -46,7 +46,7 @@ var model = undefined;
 
 
 async function initialize() {
-    model = await tf.loadLayersModel('model.json');
+    model = await tf.loadLayersModel(web_url_for_model+'model.json');
 }
 
 var upld_model=document.getElementById('upld-btn')
